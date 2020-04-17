@@ -11,10 +11,12 @@ body {
 }
 nav ul {
 	list-style-type: none;
-	margin: 0;
+	margin-top: 0;
 	padding: 0;
 	overflow: hidden;
 	background-color: #00b30c;
+	width: 100%;
+	position: fixed;
 }
 nav ul li {
 	float: left;
@@ -31,24 +33,27 @@ nav ul li a:hover {
 }
 h1 {
 	text-align: center;
+	margin-top: 50px;
 }
 p {
 	margin: 30px;
 }
 .meny li {
 	display: inline;
-	margin: 2em;
-	font-weight: 10px;
 }
 .meny {
 	text-align: center;
 	margin-top: 10%;
 }
 .meny li a {
-	text-decoration: none;
-	
-	color: black;
+	margin: 2em;
+	padding: 20px;
+	font-weight: 10px;
 	background-color: #f4ff54;
+	border: 1px solid black;
+	border-radius: 5px;
+	text-decoration: none;
+	color: black;
 	padding: 20px;
 }
 .meny li a:hover {
@@ -71,7 +76,7 @@ main {
 .grid-container {
 	display: grid;
 	grid-template-columns: 1fr 1fr 1fr;
-	grid-template-rows: 600px 600px;
+	grid-template-rows: 700px 700px;
 }
 .grid-item h2 {
 	text-align: center;
@@ -79,4 +84,31 @@ main {
 .grid-item table {
 	margin-left: auto;
 	margin-right: auto;
+}
+.grid-item table, td, th {
+	border: 1px solid black;
+	border-collapse: collapse;
+}
+.grid-item td, th {
+	padding-left: 10px;
+	padding-right: 10px;
+	padding-top: 5px;
+	padding-bottom: 5px;
+	background-color: white;
+	text-align: center;
+}
+.grid-item th {
+	background-color: #787878;
+	color: white;
+}
+.grid-item tr:nth-child(odd) td {
+	background-color: #e3e3e3;
+}
+.grid-item td:nth-child(7) {
+	font-weight: bold;
+}
+.grid-container2 {
+	display: grid;
+	grid-template-columns: 1fr 1fr 1fr;
+	grid-template-rows: 700px;
 }
