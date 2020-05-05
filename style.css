@@ -140,3 +140,14 @@ main {
 	text-align: center;
 	font-size: 18px;
 }
+.schematabell td {
+	padding-left: 30px;
+	padding-right: 30px;
+}
+.grid-container3 {
+	display: grid;
+	grid-template-columns: 1fr 1fr 1fr;
+	grid-template-rows: 275px 275px 275px;
+}
+.grid-item3 {
+	
