@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html lang="sv">
   <head>
-    <meta charset="utf-8">
+    <meta charset="utf-8" name="viewport" content="width=device-width, initial-scale=1.0">
 	<link href="style.css" rel="stylesheet">
 	<title>Skapa konto</title>
   </head>
@@ -16,5 +16,43 @@
 	    <li><a href="konto.html">Skapa konto</a></li>
 	  </ul>
 	</nav>
+	<header>
+	  <h1>Skapa konto</h1>
+	</header>
+	<main>
+	  <form method="post" action="skapat.html">
+	    <label for="fnamn">Förnamn:</label>
+		<input type="text" id="fnamn" name="fnamn"><br><br>
+		<label for="enamn">Efternamn:</label>
+		<input type="text" id="enamn" name="enamn"><br><br>
+		<input type="radio" id="Man" name="Kön">
+		<label for="Man">Man</label>	
+		<input type="radio" id="Kvinna" name="Kön">
+		<label for="Kvinna">Kvinna</label><br><br>
+		<label for="liga">Favoritliga:</label>
+		<select id="liga" name="7">
+		  <option value="Allsvenskan">Allsvenskan</option>
+		  <option value="PL">Premier League</option>
+		  <option value="LaLiga">La Liga</option>
+		  <option value="BL">Bundesliga</option>
+		  <option value="SerieA">Serie A</option>
+		  <option value="Ligue1">Ligue 1</option>
+		  <option value="Annat">Annat</option>
+		</select><br><br>
+		<label for="epost">Epost:</label>
+		<input type="text" id="epost" name="epost"><br><br>
+		<label for="lösen">Lösenord:</label>
+		<input type="password" id="lösen" name="lösen"><br><br>
+		<label for="bekräfta">Bekräfta lösenord:</label>
+		<input type="password" id="bekräfta" name="bekräfta"><br><br><br>
+		<input type="submit">
+	  </form>
+	</main>
+	<footer>
+	  <ul>
+	    <li>Epost: exempel@gmail.com</li>
+		<li>Telefon: 123-456-78-90</li>
+	  </ul>
+	</footer>
   </body>
 </html>
