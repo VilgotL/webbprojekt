@@ -20,18 +20,23 @@
 	  <h1>Skapa konto</h1>
 	</header>
 	<main>
+	  <!--formulär-->
 	  <form method="post" action="skapat.html">
+	    <!--förnamn-->
 	    <label for="fnamn">Förnamn:</label>
-		<input type="text" id="fnamn" name="fnamn"><br><br>
+		<input type="text" id="fnamn" name="fnamn" required><br><br>
+		<!--efternamn-->
 		<label for="enamn">Efternamn:</label>
-		<input type="text" id="enamn" name="enamn"><br><br>
+		<input type="text" id="enamn" name="enamn" required><br><br>
+		<!--kön (två knappar)-->
 		<input type="radio" id="Man" name="Kön">
 		<label for="Man">Man</label>	
 		<input type="radio" id="Kvinna" name="Kön">
 		<label for="Kvinna">Kvinna</label><br><br>
+		<!--favoritliga (dropdown-meny)-->
 		<label for="liga">Favoritliga:</label>
-		<select id="liga" name="7">
-		  <option value="Allsvenskan">Allsvenskan</option>
+		<select id="liga" name="liga">
+		  <option value="Allsvenskan" selected>Allsvenskan</option>
 		  <option value="PL">Premier League</option>
 		  <option value="LaLiga">La Liga</option>
 		  <option value="BL">Bundesliga</option>
@@ -39,12 +44,36 @@
 		  <option value="Ligue1">Ligue 1</option>
 		  <option value="Annat">Annat</option>
 		</select><br><br>
-		<label for="epost">Epost:</label>
-		<input type="text" id="epost" name="epost"><br><br>
+		<!--textfält-->
+		<label for="ta">textarea:</label>
+		<textarea id="ta" rows="4" cols="50" name="textarea">
+		Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
+		</textarea><br><br>
+		<!--checkbox-->
+		<label for="cb1">Checkbox</label>
+		<input type="checkbox" id="cb1" name="checkbox" checked><br>
+		<label for="cb2">Checkbox</label>
+		<input type="checkbox" id="cb2" name="checkbox"><br>
+		<label for="cb3">Checkbox</label>
+		<input type="checkbox" id="cb3" name="checkbox"><br><br>
+		<!--kontaktinfo (epost och telefon handlar om samma ämne)-->
+		<fieldset>
+		  <!--rubrik-->
+		  <legend>Kontakt</legend>
+		  <!--epost-->
+		  <label for="epost">Epost:</label>
+		  <input type="email" id="epost" name="epost"><br><br>
+		  <!--telefonnummer-->
+		  <label for="tel">Telefon:</label>
+		  <input type="tel" id="tel" name="tel"><br><br>
+		</fieldset>
+		<!--lösenord-->
 		<label for="lösen">Lösenord:</label>
 		<input type="password" id="lösen" name="lösen"><br><br>
+		<!--lösenord-->
 		<label for="bekräfta">Bekräfta lösenord:</label>
 		<input type="password" id="bekräfta" name="bekräfta"><br><br><br>
+		<!--skicka-->
 		<input type="submit">
 	  </form>
 	</main>

@@ -1,13 +1,21 @@
 <!DOCTYPE html>
+<!--språk-->
 <html lang="sv">
+  <!--innehåll som inte visas på skärmen-->
   <head>
+    <!--teckenkodning-->
     <meta charset="utf-8" name="viewport" content="width=device-width, initial-scale=1.0">
+	<!--länk till css-dokument-->
 	<link href="style.css" rel="stylesheet">
+	<!--titeln för sidan-->
 	<title>Hem</title>
   </head>
+  <!--innehåll som visas-->
   <body>
+    <!--global meny-->
     <nav>
 	  <ul>
+	    <!--länkar till sidorna-->
 	    <li><a href="index.html">Hem</a></li>
 	    <li><a href="ligor.html">Ligor</a></li>
 	    <li><a href="resultat.html">Resultat</a></li>
@@ -17,17 +25,49 @@
 	  </ul>
 	</nav>
 	<header>
+	  <!--rubrik-->
 	  <h1>Fotbollssidan</h1>
 	</header>
 	<main>
-	  <p>[information om sidan]Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed eget odio id nulla porta rutrum. Aenean malesuada sodales nibh, eu tempor augue finibus id. Sed facilisis accumsan enim, non eleifend tortor. Curabitur nec nisl aliquam magna molestie sagittis. Quisque hendrerit risus in nisi rhoncus viverra. Aenean porttitor vitae magna eget ultrices. Nunc sit amet nisi et lectus lobortis convallis vel ut nunc. Nam libero magna, aliquet sed odio a, maximus sodales ante. Morbi id tempus lorem. Integer ornare, magna laoreet mattis rhoncus, urna lacus vestibulum lectus, ut commodo augue augue ac metus. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia Curae; Cras posuere, diam eget porttitor porttitor, sem massa pellentesque purus, vel auctor purus nulla in odio. Nulla finibus arcu at sapien tempus iaculis. Vestibulum sodales bibendum quam, id cursus ante maximus ac. Praesent eros neque, ornare sit amet imperdiet eu, mollis vel leo. Mauris commodo justo sed blandit ultricies.</p>
+	  <!--information om sidan-->
+	  <section>
+	    <h2>Information</h2>
+	    <p id="info">[information om sidan]Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed eget odio id nulla porta rutrum. Aenean malesuada sodales nibh, eu tempor augue finibus id. Sed facilisis accumsan enim, non eleifend tortor. Curabitur nec nisl aliquam magna molestie sagittis. Quisque hendrerit risus in nisi rhoncus viverra. Aenean porttitor vitae magna eget ultrices. Nunc sit amet nisi et lectus lobortis convallis vel ut nunc. Nam libero magna, aliquet sed odio a, maximus sodales ante. Morbi id tempus lorem. Integer ornare, magna laoreet mattis rhoncus, urna lacus vestibulum lectus, ut commodo augue augue ac metus. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia Curae; Cras posuere, diam eget porttitor porttitor, sem massa pellentesque purus, vel auctor purus nulla in odio. Nulla finibus arcu at sapien tempus iaculis. Vestibulum sodales bibendum quam, id cursus ante maximus ac. Praesent eros neque, ornare sit amet imperdiet eu, mollis vel leo. Mauris commodo justo sed blandit ultricies.</p>
+      </section>
+	  <!--bild-->
+	  <figure>
+	    <img src="https://malung-sälensbk.se/wp-content/uploads/2019/12/eofTxEdUGrsp.jpg" alt="fotboll">
+	  </figure>
+	  <!--lokal meny-->
 	  <ul class="meny">
 	    <li><a href="ligor.html">Ligor</a></li>
 		<li><a href="resultat.html">Resultat</a></li>
 		<li><a href="schema.html">Kommande matcher</a></li>
 		<li><a href="höjdpunkter.html">höjdpunkter</a></li>
       </ul>
+	  <!--exempel på numrerad lista-->
+	  <ol start="10">
+	    <li>List item</li>
+		<li>List item</li>
+		<li>List item</li>
+		<li>List item</li>
+		<li>List item</li>
+	  </ol>
+	  <!--exempel på beskrivningslista-->
+	  <dl>
+        <dt>Term</dt>
+        <dd>Beskrivning</dd>
+        <dt>Term</dt>
+        <dd>Beskrivning</dd>
+		<dt>Term</dt>
+        <dd>Beskrivning</dd>
+        <dt>Term</dt>
+        <dd>Beskrivning</dd>
+		<dt>Term</dt>
+        <dd>Beskrivning</dd>
+      </dl>
 	</main>
+	<!--footer-->
 	<footer>
 	  <ul>
 	    <li>Epost: exempel@gmail.com</li>

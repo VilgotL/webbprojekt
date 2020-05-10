@@ -1,24 +1,78 @@
+/*typsnitt*/
 @font-face {
     font-family: Roboto-Regular;
 	src: url('fonts/roboto-regular.ttf');
 }
+/*för dator*/
+@media only screen and (min-width: 753px) {
+  /*grid för ligor.html*/
+  .grid-container {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+	grid-template-rows: 700px 700px;
+  }
+  /*grid för resultat.html och schema.html*/
+  .grid-container2 {
+	display: grid;
+	grid-template-columns: 1fr 1fr 1fr;
+	grid-template-rows: 800px;
+  }
+  /*grid för höjdpunkter.html*/
+  .grid-container3 {
+	display: grid;
+	grid-template-columns: 1fr 1fr 1fr;
+	grid-template-rows: 275px 275px 275px;
+  }
+  .meny li {
+	display: inline;
+  }
+}
+/*för mobil*/
 @media only screen and (max-width: 753px) {
+  /*flytta ner headern så att nav inte täcker rubriken*/
   header {
 	margin-top: 50px;
+  }
+  /*grid för ligor.html (en spalt)*/
+  .grid-container {
+    display: grid;
+	grid-auto-flow: row;
+  }
+  .grid-container > * {
+	margin-bottom: 20px;
+	margin-top: 20px;
+  }
+  /*grid för resultat.html och schema.html (en spalt)*/
+  .grid-container2 {
+	display: grid;
+	grid-auto-flow: row;
+  }
+  /*grid för höjdpunkter.html (en spalt)*/
+  .grid-container3 {
+	grid-auto-flow: row;
+  }
+  /*vertikal lokal meny på index.html*/
+  .meny li {
+	margin-top: 80px;
+  }
+  .meny {
+	list-style-type: none;
+	margin-bottom: 50px;
   }
 }
 html {
 	height: 100%;
 }
 body {
-    margin: 0;
-	font-family: Roboto-Regular, Arial, Sans-Serif;
+	font-family: Roboto-Regular, Arial, Sans-Serif;	
     background: linear-gradient(to bottom, #45fcde 0%, #78fd1d 100%);
 	display: flex;
     min-height: 100vh;
     flex-direction: column;
 }
-nav ul {
+
+/*global meny*/
+nav > ul {
 	list-style-type: none;
 	margin-top: 0;
 	padding: 0;
@@ -26,6 +80,7 @@ nav ul {
 	background-color: #00b30c;
 	width: 100%;
 	position: fixed;
+	margin: -8px;
 }
 nav ul li {
 	float: left;
@@ -40,37 +95,80 @@ nav ul li a {
 nav ul li a:hover {
 	background-color: #157124;
 }
+
+/*huvudrubrik*/
 h1 {
 	text-align: center;
 	margin-top: 50px;
 }
+
+section {
+	margin-top: 30px;
+}
 p {
-	margin: 30px;
+	margin: 8ex;
+	margin-top: 4ex;
 }
-.meny li {
-	display: inline;
+#info {
+	text-align: center;
 }
+/*roterad bild*/
+figure img {
+	height: 150px;
+	width: 225px;
+	display: block;
+	margin-left: auto;
+	margin-right: auto;
+	transform: rotate(10deg);
+}
+
+/*lokal meny*/
 .meny {
 	text-align: center;
-	margin-top: 10%;
+	margin-top: 8%;
 }
 .meny li a {
 	margin: 2em;
-	padding: 20px;
-	background-color: #f4ff54;
 	border: 1px solid black;
 	border-radius: 5px;
 	text-decoration: none;
 	color: black;
 	padding: 20px;
 }
+/*LoVe Focus HAte*/
+.meny li a:link {
+	background-color: #f4ff54; 
+}
+.meny li a:visited {
+	background-color: rgb(122, 188, 239); 
+}
+.meny li a:focus {
+	background-color: hsl(313, 71%, 79%); 
+}
 .meny li a:hover {
 	background-color: #ffa02b;
-	transition: background-color 0.2s;
+	transition: background-color 0.3s;
 }
+.meny li a:active {
+	background-color: white
+}
+
+/*exempel på ol och dl*/
+ol {
+	margin-top: 70px;
+	text-align: center;
+    list-style-position: inside;
+}
+dl {
+	margin-top: 50px;
+	margin-bottom: 50px;
+	text-align: center;
+}
+
 footer {
 	background-color: #2b2b2b;
 	height: 30%;
+	margin: -8px;
 }
 footer li {
 	color: white;
@@ -81,21 +179,25 @@ footer li {
 main {
 	flex: 1 0 auto;
 }
-.grid-container {
-	display: grid;
-	grid-template-columns: 1fr 1fr 1fr;
-	grid-template-rows: 700px 700px;
+/*grid för ligor.html*/
+.grid-container caption {
+	font-size: 25px;
+	margin-bottom: 10px;
 }
-.grid-item h2 {
-	text-align: center;
+/*flagga*/
+.grid-container caption img {
+	height: 30px;
+	width: 30px;
+	vertical-align: -6px;
 }
-.grid-item table {
+.grid-container table {
 	margin-left: auto;
 	margin-right: auto;
 	border: 1px solid black;
 	border-collapse: collapse;
 }
-.grid-item th {
+/*första raden*/
+.grid-container th {
 	background-color: #787878;
 	color: white;
 	padding-left: 10px;
@@ -104,7 +206,8 @@ main {
 	padding-bottom: 5px;
 	text-align: center;
 }
-.grid-item td {
+/*alla celler*/
+.grid-container td {
 	padding-left: 10px;
 	padding-right: 10px;
 	padding-top: 5px;
@@ -112,60 +215,53 @@ main {
 	background-color: white;
 	text-align: center;
 }
-.grid-item tr:nth-child(odd) td {
+/*zebra striping*/
+.grid-container tr:nth-child(odd) td {
 	background-color: #e3e3e3;
 }
-.grid-item td:nth-child(7) {
+/*sista kolumnen*/
+.grid-container td:nth-child(7) {
 	font-weight: bold;
 }
-.grid-item td img {
+/*loggorna*/
+.grid-container td img {
 	height: 20px;
 	width: 20px;
 	float: left;
 }
-.grid-item h2 img {
-	height: 30px;
-	width: 30px;
-	vertical-align: -6px;
-}
-.grid-container2 {
-	display: grid;
-	grid-template-columns: 1fr 1fr 1fr;
-	grid-template-rows: 800px;
-}
-.grid-item2:nth-child(2) {
+
+/*grid för resultat.html och schema.html*/
+/*ram för att separera spalterna*/
+.grid-container2 .grid-item2 {
 	border-right: 3px solid white;
 	border-left: 3px solid white;
 }
-.grid-item2 table {
+/*tabell*/
+.grid-container2 table {
 	margin-left: auto;
 	margin-right: auto;
 }
-.grid-item2 td {
+/*alla celler*/
+.grid-container2 td {
 	padding-top: 15px;
 	padding-left: 12px;
 	padding-right: 12px;
 	text-align: center;
 	font-size: 18px;
 }
+/*alla celler på schema.html*/
 .schematabell td {
 	padding-left: 30px;
 	padding-right: 30px;
 }
-.grid-container3 {
-	display: grid;
-	grid-template-columns: 1fr 1fr 1fr;
-	grid-template-rows: 275px 275px 275px;
-}
-.grid-item3 p, h2 {
+/*grid för höjdpunkter.html*/
+.grid-container3 p, h2 {
 	text-align: center;
 	margin-top: 2px;
 	margin-bottom: 2px;
 }	
+/*formulär*/
 form {
 	text-align: center;
 	margin-top: 50px;
-}
-p {
-	text-align: center;
 }
