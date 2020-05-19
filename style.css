@@ -3,66 +3,6 @@
     font-family: Roboto-Regular;
 	src: url('fonts/roboto-regular.ttf');
 }
-/*för dator*/
-@media only screen and (min-width: 753px) {
-  /*grid för ligor.html*/
-  .grid-container {
-    display: grid;
-    grid-template-columns: 1fr 1fr 1fr;
-	grid-template-rows: 700px 700px;
-  }
-  /*grid för resultat.html och schema.html*/
-  .grid-container2 {
-	display: grid;
-	grid-template-columns: 1fr 1fr 1fr;
-	grid-template-rows: 800px;
-  }
-  /*grid för höjdpunkter.html*/
-  .grid-container3 {
-	display: grid;
-	grid-template-columns: 1fr 1fr 1fr;
-	grid-template-rows: 275px 275px 275px;
-  }
-  .meny li {
-	display: inline;
-  }
-}
-/*för mobil*/
-@media only screen and (max-width: 753px) {
-  /*flytta ner headern så att nav inte täcker rubriken*/
-  header {
-	margin-top: 50px;
-  }
-  /*grid för ligor.html (en spalt)*/
-  .grid-container {
-    display: grid;
-	grid-auto-flow: row;
-  }
-  .grid-container > * {
-	margin-bottom: 20px;
-	margin-top: 20px;
-  }
-  /*grid för resultat.html och schema.html (en spalt)*/
-  .grid-container2 {
-	display: grid;
-	grid-auto-flow: row;
-  }
-  /*grid för höjdpunkter.html (en spalt)*/
-  .grid-container3 {
-	grid-auto-flow: row;
-  }
-  /*vertikal lokal meny på index.html*/
-  .meny li {
-	margin-top: 80px;
-  }
-  .meny {
-	list-style-type: none;
-	margin-bottom: 50px;
-  }
-}
-html {
-	height: 100%;
-}
 body {
 	font-family: Roboto-Regular, Arial, Sans-Serif;	
     background: linear-gradient(to bottom, #45fcde 0%, #78fd1d 100%);
@@ -79,8 +19,6 @@ nav > ul {
 	overflow: hidden;
 	background-color: #00b30c;
 	width: 100%;
-	position: fixed;
-	margin: -8px;
 }
 nav ul li {
 	float: left;
@@ -165,10 +103,17 @@ dl {
 	text-align: center;
 }
 
+/*ljud*/
+audio {
+	display: block;
+	margin-left: auto;
+	margin-right: auto;
+	margin-bottom: 20px;
+}
+
 footer {
 	background-color: #2b2b2b;
 	height: 30%;
-	margin: -8px;
 }
 footer li {
 	color: white;
@@ -188,7 +133,6 @@ main {
 .grid-container caption img {
 	height: 30px;
 	width: 30px;
-	vertical-align: -6px;
 }
 .grid-container table {
 	margin-left: auto;
@@ -196,27 +140,21 @@ main {
 	border: 1px solid black;
 	border-collapse: collapse;
 }
+.grid-container th, .grid-container td {
+	padding-left: 10px;
+	padding-right: 10px;
+	padding-top: 5px;
+	padding-bottom: 5px;
+	text-align: center;
+	background-color: white;
+}
 /*första raden*/
 .grid-container th {
 	background-color: #787878;
 	color: white;
-	padding-left: 10px;
-	padding-right: 10px;
-	padding-top: 5px;
-	padding-bottom: 5px;
-	text-align: center;
-}
-/*alla celler*/
-.grid-container td {
-	padding-left: 10px;
-	padding-right: 10px;
-	padding-top: 5px;
-	padding-bottom: 5px;
-	background-color: white;
-	text-align: center;
 }
 /*zebra striping*/
-.grid-container tr:nth-child(odd) td {
+.grid-container tr:nth-child(even) td {
 	background-color: #e3e3e3;
 }
 /*sista kolumnen*/
@@ -264,4 +202,68 @@ main {
 form {
 	text-align: center;
 	margin-top: 50px;
+	margin-bottom: 20px;
+}
+textarea {
+	height:200px;
+	width: 400px;
+	background-color: lightblue;
+}
+
+/*för dator*/
+@media only screen and (min-width: 753px) {
+  /*grid för ligor.html*/
+  .grid-container {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+	grid-template-rows: 700px 700px;
+  }
+  /*grid för resultat.html och schema.html*/
+  .grid-container2 {
+	display: grid;
+	grid-template-columns: 1fr 1fr 1fr;
+	grid-template-rows: 800px;
+  }
+  /*grid för höjdpunkter.html*/
+  .grid-container3 {
+	display: grid;
+	grid-template-columns: 1fr 1fr 1fr;
+	grid-template-rows: 275px 275px 275px;
+  }
+  .meny li {
+	display: inline;
+  }
+}
+/*för mobil*/
+@media only screen and (max-width: 753px) {
+  /*flytta ner headern så att nav inte täcker rubriken*/
+  header {
+	margin-top: 50px;
+  }
+  /*grid för ligor.html (en spalt)*/
+  .grid-container {
+    display: grid;
+	grid-auto-flow: row;
+  }
+  .grid-container > * {
+	margin-bottom: 20px;
+	margin-top: 20px;
+  }
+  /*grid för resultat.html och schema.html (en spalt)*/
+  .grid-container2 {
+	display: grid;
+	grid-auto-flow: row;
+  }
+  /*grid för höjdpunkter.html (en spalt)*/
+  .grid-container3 {
+	grid-auto-flow: row;
+  }
+  /*vertikal lokal meny på index.html*/
+  .meny li {
+	margin-top: 80px;
+  }
+  .meny {
+	list-style-type: none;
+	margin-bottom: 50px;
+  }
 }

@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html lang="sv">
   <head>
-    <meta charset="utf-8" name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta charset="utf-8">
 	<link href="style.css" rel="stylesheet">
 	<title>Skapa konto</title>
   </head>
@@ -29,9 +29,9 @@
 		<label for="enamn">Efternamn:</label>
 		<input type="text" id="enamn" name="enamn" required><br><br>
 		<!--kön (två knappar)-->
-		<input type="radio" id="Man" name="Kön">
+		<input type="radio" id="Man" name="Kön" value="Man">
 		<label for="Man">Man</label>	
-		<input type="radio" id="Kvinna" name="Kön">
+		<input type="radio" id="Kvinna" name="Kön" value="Kvinna">
 		<label for="Kvinna">Kvinna</label><br><br>
 		<!--favoritliga (dropdown-meny)-->
 		<label for="liga">Favoritliga:</label>
@@ -51,11 +51,11 @@
 		</textarea><br><br>
 		<!--checkbox-->
 		<label for="cb1">Checkbox</label>
-		<input type="checkbox" id="cb1" name="checkbox" checked><br>
+		<input type="checkbox" id="cb1" name="checkbox" value="cb1" checked><br>
 		<label for="cb2">Checkbox</label>
-		<input type="checkbox" id="cb2" name="checkbox"><br>
+		<input type="checkbox" id="cb2" name="checkbox" value="cb2"><br>
 		<label for="cb3">Checkbox</label>
-		<input type="checkbox" id="cb3" name="checkbox"><br><br>
+		<input type="checkbox" id="cb3" name="checkbox" value="cb3"><br><br>
 		<!--kontaktinfo (epost och telefon handlar om samma ämne)-->
 		<fieldset>
 		  <!--rubrik-->
